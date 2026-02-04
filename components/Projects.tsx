@@ -9,7 +9,7 @@ const PROJECTS = [
     year: '2025',
     description: 'A robust Reminder System that autonomously monitors appointment schedules and dispatches personalized notifications via WhatsApp, ensuring timely engagement based on individual customer parameters.',
     tech: ['Node.js', 'Express', 'WhatsApp-web.js', 'Multer'],
-    link: 'https://github.com' // Replace with actual link
+    link: 'https://github.com/Akhilan710/WhatsApp-Reminder-bot' // Replace with actual link
   }
 ];
 

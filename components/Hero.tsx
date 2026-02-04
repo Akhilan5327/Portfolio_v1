@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const Hero: React.FC = () => {
@@ -19,6 +18,26 @@ export const Hero: React.FC = () => {
           <p className="text-[#A0151E] font-editorial uppercase text-sm md:text-lg tracking-[0.5em] font-medium drop-shadow-md">
             Associate Software Engineer <span className="mx-6 text-white/40">/</span> FullStack
           </p>
+        </div>
+
+        {/* Quick Links */}
+        <div className="mt-16 flex flex-wrap gap-6 justify-center fade-in [animation-delay:1000ms]">
+          <a
+            href="#projects"
+            className="group px-8 py-4 border border-white/20 hover:border-[#A0151E] rounded-full transition-all duration-300 hover:bg-[#A0151E]/10"
+          >
+            <span className="text-[11px] uppercase tracking-[0.3em] text-white/80 group-hover:text-[#A0151E] font-mono-system">
+              View Projects
+            </span>
+          </a>
+          <a
+            href="#contact"
+            className="group px-8 py-4 bg-[#A0151E] hover:bg-[#801118] rounded-full transition-all duration-300 hover:scale-105"
+          >
+            <span className="text-[11px] uppercase tracking-[0.3em] text-white font-mono-system">
+              Get in Touch
+            </span>
+          </a>
         </div>
       </div>
 

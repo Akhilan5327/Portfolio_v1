@@ -1,14 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visual Systems Architect | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Akhilan A - Associate Software Engineer | Full Stack Developer Portfolio</title>
+    <meta name="title" content="Akhilan A - Associate Software Engineer | Full Stack Developer Portfolio" />
+    <meta name="description" content="Associate Software Engineer specializing in Full Stack Development. Experienced in React, Node.js, Oracle APEX, Spring Boot, and AI-powered solutions. View my projects and certifications." />
+    <meta name="keywords" content="Software Engineer, Full Stack Developer, React, Node.js, Oracle APEX, Spring Boot, Java, Portfolio, Web Development" />
+    <meta name="author" content="Akhilan A" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourportfolio.com/" />
+    <meta property="og:title" content="Akhilan A - Associate Software Engineer | Full Stack Developer" />
+    <meta property="og:description" content="Associate Software Engineer specializing in Full Stack Development with expertise in React, Node.js, and modern web technologies." />
+    <meta property="og:image" content="https://yourportfolio.com/og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yourportfolio.com/" />
+    <meta property="twitter:title" content="Akhilan A - Associate Software Engineer | Full Stack Developer" />
+    <meta property="twitter:description" content="Associate Software Engineer specializing in Full Stack Development with expertise in React, Node.js, and modern web technologies." />
+    <meta property="twitter:image" content="https://yourportfolio.com/twitter-image.jpg" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourportfolio.com/" />
+    
+    <!-- Preconnect to external resources for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Akhilan A",
+      "jobTitle": "Associate Software Engineer",
+      "description": "Full Stack Developer specializing in modern web technologies",
+      "url": "https://yourportfolio.com",
+      "sameAs": [
+        "https://linkedin.com/in/yourprofile",
+        "https://github.com/yourusername",
+        "https://x.com/yourhandle"
+      ],
+      "knowsAbout": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Oracle APEX",
+        "Spring Boot",
+        "Java",
+        "Full Stack Development"
+      ]
+    }
+    </script>
+    
     <style>
       :root {
         --crimson: #A0151E;
@@ -70,7 +130,25 @@
       ::-webkit-scrollbar-thumb:hover {
         background: var(--crimson);
       }
+      
+      /* Focus visible styles for accessibility */
+      *:focus-visible {
+        outline: 2px solid var(--crimson);
+        outline-offset: 2px;
+      }
+      
+      /* Reduced motion for accessibility */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
     </style>
+    
     <script type="importmap">
     {
       "imports": {
@@ -83,7 +161,23 @@
   <link rel="stylesheet" href="/index.css">
 </head>
   <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#hero" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[200] focus:bg-[#A0151E] focus:text-white focus:px-4 focus:py-2 focus:rounded">
+      Skip to main content
+    </a>
+    
     <div id="root"></div>
+    
+    <!-- Loading state -->
+    <noscript>
+      <div style="display: flex; align-items: center; justify-content: center; height: 100vh; background: #0a0a0a; color: white; font-family: sans-serif; text-align: center; padding: 20px;">
+        <div>
+          <h1>JavaScript Required</h1>
+          <p>Please enable JavaScript to view this portfolio.</p>
+        </div>
+      </div>
+    </noscript>
+    
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>

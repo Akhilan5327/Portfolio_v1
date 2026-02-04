@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const CERTS = [
@@ -7,16 +6,16 @@ const CERTS = [
     body: 'Amazon Web Services · Associate Level Certification',
     badge: 'ASSOCIATE',
     code: 'AWS-DE',
-    // Using simple-icons for clean, square, high-quality vector
-    logoUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/amazonwebservices.svg'
+    // Using a reliable AWS logo source
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg'
   },
   { 
     title: 'Oracle APEX Cloud Certified Developer Professional', 
     body: 'Oracle University · Professional Level Certification',
     badge: 'PROFESSIONAL',
     code: 'ORCL-APX',
-    // Using simple-icons for clean, square, high-quality vector
-    logoUrl: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/oracle.svg'
+    // Using a reliable Oracle logo source
+    logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg'
   }
 ];
 
@@ -57,11 +56,15 @@ export const Certifications: React.FC = () => {
 
             {/* Visual Logo - High Contrast White Circular "Medal" Style */}
             <div className="relative shrink-0 order-1 md:order-2 group-hover:scale-110 transition-transform duration-700">
-              <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-white flex items-center justify-center p-10 md:p-14 shadow-2xl shadow-black/80 overflow-hidden relative z-10 border-[6px] border-white">
+              <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-white flex items-center justify-center p-8 md:p-12 shadow-2xl shadow-black/80 overflow-hidden relative z-10 border-[6px] border-white">
                 <img 
                   src={cert.logoUrl} 
                   alt={`${cert.title} Logo`} 
-                  className={`w-full h-full object-contain ${cert.code === 'AWS-DE' ? 'aws-color' : 'oracle-color'}`}
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    console.log(`Failed to load certification logo: ${cert.code}`);
+                    e.currentTarget.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="40" fill="%23A0151E">' + cert.code + '</text></svg>';
+                  }}
                 />
               </div>
               
@@ -80,17 +83,6 @@ export const Certifications: React.FC = () => {
           </div>
         ))}
       </div>
-      
-      <style>{`
-        .aws-color {
-          /* Precise AWS #FF9900 Filter */
-          filter: invert(61%) sepia(84%) saturate(2250%) hue-rotate(5deg) brightness(103%) contrast(105%) !important;
-        }
-        .oracle-color {
-          /* Precise Oracle #F80000 Filter */
-          filter: invert(13%) sepia(93%) saturate(6015%) hue-rotate(352deg) brightness(91%) contrast(114%) !important;
-        }
-      `}</style>
     </section>
   );
 };
